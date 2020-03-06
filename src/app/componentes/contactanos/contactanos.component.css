@@ -1,0 +1,10 @@
+a{
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.more{
+    font-size: 3rem;
+    background-color: red;
+    border-radius: 5px;
+}

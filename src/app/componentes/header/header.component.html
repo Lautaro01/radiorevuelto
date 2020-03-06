@@ -7,15 +7,15 @@
         <nav class="navegador">
             <ul [ngClass]="{show: mostrar}" >
                 <li>
-                    <a href="" class="botonplay">
+                    <a href="" class="botonplay" [routerLink]="['/escuchanos']" routerLinkActive="router-link-active" >
                         Escuchanos 
                     <i class="fas fa-play"></i>
                     </a>
                 </li>
-                <li><a href="">inicio</a></li>
-                <li><a href="">Agenda</a></li>
-                <li><a href="">Discos</a></li>
-                <li><a href="">Contactanos</a></li>
+                <li><a href="" [routerLink]="['/inicio']" routerLinkActive="router-link-active">inicio</a></li>
+                <li><a href="" [routerLink]="['/agenda']" routerLinkActive="router-link-active" >Agenda</a></li>
+                <li><a href="" [routerLink]="['/discos']" routerLinkActive="router-link-active">Discos</a></li>
+                <li><a href="" [routerLink]="['/contactanos']" routerLinkActive="router-link-active" >Contactanos</a></li>
             </ul>
         </nav>
     </div>

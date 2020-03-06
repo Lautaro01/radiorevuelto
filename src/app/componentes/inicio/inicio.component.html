@@ -3,7 +3,9 @@
 <div class="container" style="background-color: rgb(27, 27, 27); margin-bottom: 120px;">
     <div class="row">
         <div class="col">
+            <hr class="display-4">
             <div class="jumbotron" style="background-color:rgba(0, 0, 0, 0.246); border-radius: 0;">
+              
                 <h1 class="display-4">Sobre nosotros: <strong style="-webkit-text-stroke: 2px black; font-size: 3rem;">Revuelto</strong></h1>
                 <div class="row">
                     <div class="col" style="padding: 1rem 2rem;">
@@ -18,9 +20,40 @@
                     
                 </div>
                 <hr class="my-4" style="background-color: azure;">
+                <div class="row">
+                <div class="col">
+                  <table>
+                    <tr>
+                      <td>
+                        <a  href="https://www.facebook.com/revueltoderadio/"><img src="../../../assets/imaganes/facebook.png" alt="" width="50px"></a>   
+                      </td>
+                      <td>
+                        <br><a  href="https://www.facebook.com/revueltoderadio/"><h1 class="link">Facebook/revueltoderaido</h1></a>  
+                      </td>
+                    </tr>
+                  </table>
+                               
+                </div>
+                <div class="col">
+                  <table>
+                    <tr>
+                      <td>
+                        <a href="https://www.instagram.com/revueltoderadio/"><img src="../../../assets/imaganes/ig.png" alt="" width="50px"></a>     
+                      </td>
+                      <td>
+                       <br> <a href="https://www.instagram.com/revueltoderadio/"><h1 class="link">Instagram/revueltoderaido</h1></a>     
+                      </td>
+                    </tr>
+                  </table>
+                  <!-- <a href="https://www.instagram.com/revueltoderadio/"><img src="../../../assets/imaganes/ig.png" alt=""><h1>Instagram/revueltoderaido</h1></a>      -->
+                </div>
+              </div>
+                <hr class="my-4" style="background-color: azure;">
                 <div style="text-align: center;">
                     <p>Podes escuchanos</p>
-                    <a class="btn btn-danger btn-lg" href="#" role="button">¡Escuchanos Ahora!</a><br>
+                    <a class="btn btn-danger btn-lg" href="#" role="button" [routerLink]="['/escuchanos']" routerLinkActive="router-link-active" >¡Escuchanos Ahora!</a><br>
+                    <img src="../../../assets/imaganes/spoty.png" alt="" width="300px">
+                    <img src="../../../assets/imaganes/mixcloud-logo.png" width="300px" alt="" style="background-color: rgb(255, 255, 255); padding: 1rem 1rem; margin: 1rem 1rem;">
                 </div>
                 <hr class="my-4" style="background-color: azure;">
                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -51,7 +84,7 @@
     </div>
     <div style="text-align: center;">
             <h1>Mira nuestras reseñas</h1>
-        </div>
+    </div>
     <div class="row mt-5" style="text-align: center;">
 
         <div class="col mb-5" style="color: black;">

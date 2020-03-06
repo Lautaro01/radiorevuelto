@@ -1,0 +1,23 @@
+
+<header>
+    <div class="contenedor">
+        <a href=""><img src="../../../assets/imaganes/logo.png" alt="" class="logo" width="70px">
+            <img src="../../../assets/imaganes/revuelto.png" alt="" width="200px"></a>
+            <span class="icono" (click)="show()"><i class="fas fa-bars" style="color: aliceblue; font-size: 2rem;"></i></span>
+        <nav class="navegador">
+            <ul [ngClass]="{show: mostrar}" >
+                <li>
+                    <a href="" class="botonplay">
+                        Escuchanos 
+                    <i class="fas fa-play"></i>
+                    </a>
+                </li>
+                <li><a href="">inicio</a></li>
+                <li><a href="">Agenda</a></li>
+                <li><a href="">Discos</a></li>
+                <li><a href="">Contactanos</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<router-outlet></router-outlet>

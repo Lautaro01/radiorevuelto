@@ -1,0 +1,80 @@
+header
+{
+    background-color: rgb(26, 26, 26);
+    -webkit-box-shadow: inset 0px 0px 33px 1px rgba(0,0,0,0.39);
+-moz-box-shadow: inset 0px 0px 33px 1px rgba(0,0,0,0.39);
+box-shadow: inset 0px 0px 33px 1px rgba(0,0,0,0.39);
+    padding: 0rem 0.5rem;
+}
+
+.contenedor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.navegador ul{
+    list-style: none;
+    
+}
+
+.navegador ul li{
+    display: inline-block;
+    
+}
+
+.navegador ul li a{
+    text-decoration: none;
+    display: block;
+    padding: 1rem 1.5rem;
+    margin: 1rem 1rem;
+    color: rgb(255, 255, 255);
+    font-family: 'Righteous';
+    font-size: 1.2rem;
+    transition: 0.2s;
+}
+
+.navegador ul li a:hover{
+    background-color: rgb(207, 22, 22);
+    border-radius: 10px;
+    transition: 0.3s;
+    font-size: 1.7rem;
+}
+
+.botonplay{
+    background-color: rgb(231, 18, 18);
+    border-radius: 10px;
+}
+
+.fa-bars{
+    display: none;
+}
+
+@media (max-width:999px)
+{
+    .navegador ul li{
+        display: block;
+        text-align: center;
+    }
+
+    .navegador{
+        width: 100%;
+    }
+
+    .navegador ul{
+        display: none;
+    }
+    .navegador ul.show{
+        display: block;
+    }
+
+    .fa-bars{
+        display: block;
+    }
+    
+
+    .logo{
+        display: none;
+    }
+}

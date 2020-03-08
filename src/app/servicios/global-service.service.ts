@@ -7,9 +7,9 @@ import { Router } from '@angular/router';
 })
 export class GlobalServiceService { 
 
-  rutaDiscos : string = "http://revueltoderadio.com/api/v1/discos/";
+  private rutaDiscos : string = "http://revueltoderadio.com/api/v1/discos/";
 
-  httpOptions = {
+  private httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'text/html; charset=UTF-8',
       "Access-Control-Allow-Origin" : "*",
@@ -31,5 +31,10 @@ export class GlobalServiceService {
     datos.append("id",id);
     this.ruta.navigateByUrl("/disco");
     return this.http.post(this.rutaDiscos,datos);
+  }
+
+  traerEventosAgenda()
+  {
+    return this.http.get("http://revueltoderadio.com/api/v1/events/");
   }
 }

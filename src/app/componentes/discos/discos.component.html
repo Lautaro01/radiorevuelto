@@ -3,13 +3,13 @@
         <h1 style="color: red; font-size: 2rem; padding: 1rem;">Lista de Discos</h1>
         <p>Aca podes encontrar todas nuestras reseñas de los albunes</p>
     </div>
-    <div class="jumbotron" style="background-color:rgba(0, 0, 0, 0.246); border-radius: 0; text-align: center; padding: 1rem 1rem;">
+    <div class="jumbotron" style="background-color:rgba(0, 0, 0, 0.082); border-radius: 0; text-align: center; padding: 1rem 1rem;">
         <div class="row" style="text-align: center;">
-            <div class="col" style="text-align: center; margin: auto;"   *ngFor="let disco of img">
-                <div class="card" style="width: 18rem;text-align: center; margin: auto;">
+            <div class="col" style="text-align: center; margin: auto;  width: 14rem; margin-bottom: 20px;"   *ngFor="let disco of img">
+                <div style="text-align: center; margin: auto; width: 14rem;">
                     <a href="" [routerLink]="['/disco', disco.id]"
                     routerLinkActive="router-link-active">
-                    <img src="{{disco.foto}}" alt="" class="card-img-top" style="text-align: center;"></a>
+                    <img src="{{disco.foto}}" alt="" class="card-img-top" style="text-align: center;" width="100px" height="200px"></a>
                 </div>
             </div>
         </div>

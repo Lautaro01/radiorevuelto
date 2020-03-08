@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import dayGridPlugin from '@fullcalendar/daygrid';
+import esLocale from '@fullcalendar/core/locales/es';
+import { GlobalServiceService } from 'src/app/servicios/global-service.service';
+
 
 @Component({
   selector: 'app-agenda',
@@ -9,12 +12,20 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 export class AgendaComponent implements OnInit {
 
 
-  constructor() { }
+  constructor(private servis : GlobalServiceService) { }
+  locales = [esLocale];
 
-  eventos : any;
+  events: any;
+
   calendarPlugins = [dayGridPlugin]; 
 
   ngOnInit(): void {
+    this.servis.traerEventosAgenda().subscribe(
+      datos=>{
+        this.events = datos;
+        console.log(datos);
+      }
+    )
   }
 
 }

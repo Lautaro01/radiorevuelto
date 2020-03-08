@@ -18,6 +18,7 @@ export class DiscosComponent implements OnInit {
       discos =>{
         this.img = discos;
         console.log(discos);
+        console.log(discos[0].foto);
       }
     )
   }

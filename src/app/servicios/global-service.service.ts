@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
 })
 export class GlobalServiceService { 
 
-  rutaDiscos : string = "http://ravueltoderadio.com/server/v1/discos";
+  rutaDiscos : string = "http://revueltoderadio.com/api/v1/discos/";
 
   httpOptions = {
     headers: new HttpHeaders({
@@ -22,12 +22,14 @@ export class GlobalServiceService {
 
   traerDiscos()
   {
-    return this.http.post(this.rutaDiscos);
+    return this.http.get(this.rutaDiscos);
   }
 
   traerUnDisco(id)
   {
+    let datos = new FormData;
+    datos.append("id",id);
     this.ruta.navigateByUrl("/disco");
-    return this.http.get(this.rutaDiscos) + "/" + id;
+    return this.http.post(this.rutaDiscos,datos);
   }
 }

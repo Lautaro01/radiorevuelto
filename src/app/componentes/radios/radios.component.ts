@@ -1,12 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as L from 'leaflet';
 
- const tiles : any = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  maxZoom: 19,
-  attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-  });
-  
-  tiles.addTo(this.map);
+
 
 @Component({
   selector: 'app-radios',
@@ -15,19 +10,32 @@ import * as L from 'leaflet';
 })
 export class RadiosComponent implements OnInit {
 
-  private map;
 
- 
 
+  iniciar()
+  {
+
+  
+  }
+
+  options = {
+    layers: [
+      L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 18, attribution: '...' }),
+      
+      
+      L.marker([-31.2721976, -61.3445245]).bindPopup("hola")
+
+    ],
+    zoom: 6,
+    center: L.latLng(-31.2721976, -61.3445245),
+  };
   
 
   constructor() { }
 
   ngOnInit(): void {
-    this.map = L.map('map', {
-      center: [ 39.8282, -98.5795 ],
-      zoom: 3
-    });
   }
+
+  
 
 }

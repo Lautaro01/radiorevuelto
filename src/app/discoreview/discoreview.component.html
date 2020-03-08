@@ -1,0 +1,28 @@
+<div class="container" style="background-color: rgb(27, 27, 27); margin-bottom: 120px;">
+    <div class="row">
+        <div class="col">
+            <div class="jumbotron" style="background-color:rgba(0, 0, 0, 0.246); border-radius: 0;">
+                <div>
+                    <button class="btn"[routerLink]="['/discos']" routerLinkActive="router-link-active" style="background-color: red; color: rgb(235, 235, 235); margin: 1rem 1rem;" >Volver a la lista</button>
+                    </div>
+
+                <h1 style="font-size: 2.5rem; color: rgb(218, 0, 0); text-align: center; padding: 0.5rem 0.5rem;">{{disco[0].titulo | uppercase}}</h1>
+                <img src="{{disco[0].foto}}" alt="" width="250px" height="250px" style="float: left; padding: 1rem 1rem;"> 
+                <p style="font-size: 1.5rem; padding: 1rem 1rem; color: rgb(235, 235, 235) ; line-height: 1em;">{{disco[0].parrafo}}</p>
+                <div style="text-align: center;">
+                    <iframe width="80%" height="300px" src="https://www.youtube.com/embed/hohadmiCK_8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <!-- <div class="container">
+                    <div class="row">
+                        <div class="col" style="justify-self:right;">
+                           
+                        </div>
+                        <div class="col">
+                           
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>      
+</div>

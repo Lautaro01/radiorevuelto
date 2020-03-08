@@ -6,6 +6,8 @@ import { ContactanosComponent } from './componentes/contactanos/contactanos.comp
 import { EscuchanosComponent } from './componentes/escuchanos/escuchanos.component';
 import { DiscosComponent } from './componentes/discos/discos.component';
 import { AgendaComponent } from './componentes/agenda/agenda.component';
+import { RadiosComponent } from './componentes/radios/radios.component';
+import { DiscoreviewComponent } from './discoreview/discoreview.component';
 
 
 const routes: Routes = [
@@ -15,7 +17,9 @@ const routes: Routes = [
     {path:'contactanos',component:ContactanosComponent},
     {path:'escuchanos',component:EscuchanosComponent},
     {path:'discos',component:DiscosComponent},
+    {path:'disco/:id',component:DiscoreviewComponent},
     {path:'agenda',component:AgendaComponent},
+    {path:'radios',component:RadiosComponent},
 
 
   ]

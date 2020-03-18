@@ -16,6 +16,7 @@ import { AgendaComponent } from './componentes/agenda/agenda.component';
 import { RadiosComponent } from './componentes/radios/radios.component'; 
 import { FullCalendarModule } from '@fullcalendar/angular';
 import { DiscoreviewComponent } from './discoreview/discoreview.component';
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,9 @@ import { DiscoreviewComponent } from './discoreview/discoreview.component';
     FullCalendarModule,
     LeafletModule.forRoot()
   ],
-  providers: [],
+  providers: [
+    {provide : LocationStrategy , useClass: HashLocationStrategy }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

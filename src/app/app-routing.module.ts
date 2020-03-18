@@ -11,7 +11,8 @@ import { DiscoreviewComponent } from './discoreview/discoreview.component';
 
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: '/inicio' },
+  // {path:'**',redirectTo:''},
+  {path: '', pathMatch: 'full', redirectTo: '/inicio' },
   {path:'',component:HeaderComponent,children: [
     {path:'inicio',component:InicioComponent},
     {path:'contactanos',component:ContactanosComponent},

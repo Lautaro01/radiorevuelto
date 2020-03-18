@@ -37,4 +37,9 @@ export class GlobalServiceService {
   {
     return this.http.get("http://revueltoderadio.com/api/v1/events/");
   }
+
+  traerRadiosMapa()
+  {
+    return this.http.get("http://revueltoderadio.com/api/v1/mapa_radios/");
+  }
 }

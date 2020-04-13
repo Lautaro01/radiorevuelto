@@ -17,6 +17,8 @@ import { RadiosComponent } from './componentes/radios/radios.component';
 import { FullCalendarModule } from '@fullcalendar/angular';
 import { DiscoreviewComponent } from './discoreview/discoreview.component';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+import { FormularioComponent } from './componentes/formulario/formulario.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,7 @@ import { LocationStrategy, HashLocationStrategy } from '@angular/common';
     AgendaComponent,
     RadiosComponent,
     DiscoreviewComponent,
+    FormularioComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,7 +39,8 @@ import { LocationStrategy, HashLocationStrategy } from '@angular/common';
     BrowserAnimationsModule,
     HttpClientModule,
     FullCalendarModule,
-    LeafletModule.forRoot()
+    LeafletModule.forRoot(),
+    FormsModule
   ],
   providers: [
     {provide : LocationStrategy , useClass: HashLocationStrategy }

@@ -1,6 +1,13 @@
 
 <script src="../../../../node_modules/@fullcalendar/core/locales/es.js"></script>
 <div class="container" style="background-color: rgb(27, 27, 27); margin-bottom: 120px; padding-top: 3rem;">
+  <div style="color: aliceblue; text-align: center;  font-family: Arial, Helvetica, sans-serif;" class="mb-5">
+    <h1>NUESTRA AGENDA</h1>
+    <P>Aca podras encontrar nuestros proximos eventos</P>
+    <p>Podes dejar tu solicitud para aparecir nuestra agenda haciendo<a href="" [routerLink]="['/formulario']" routerLinkActive="router-link-active" >
+      Click aqui 
+    </a></p>
+  </div>
     <div class="jumbotron">
         <full-calendar defaultView="dayGridMonth" [plugins]="calendarPlugins"  
         [events]=events

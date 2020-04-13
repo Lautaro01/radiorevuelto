@@ -8,6 +8,7 @@ import { DiscosComponent } from './componentes/discos/discos.component';
 import { AgendaComponent } from './componentes/agenda/agenda.component';
 import { RadiosComponent } from './componentes/radios/radios.component';
 import { DiscoreviewComponent } from './discoreview/discoreview.component';
+import { FormularioComponent } from './componentes/formulario/formulario.component';
 
 
 const routes: Routes = [
@@ -21,8 +22,7 @@ const routes: Routes = [
     {path:'disco/:id',component:DiscoreviewComponent},
     {path:'agenda',component:AgendaComponent},
     {path:'radios',component:RadiosComponent},
-
-
+    {path:'formulario',component:FormularioComponent}
   ]
   }
 ];

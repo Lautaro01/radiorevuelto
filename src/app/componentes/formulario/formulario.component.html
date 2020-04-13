@@ -1,0 +1,120 @@
+<div class="container" style="background-color: rgb(27, 27, 27); margin-bottom: 120px; padding-top: 1rem;">
+    <div class="row">
+        <div class="col">
+            <div class="jumbotron" style="background-color:rgb(241, 241, 241); border-radius: 0; text-align: center; border-radius: 10px;">
+                <form action=""> 
+
+            
+                <h2>Para aparecer en la agenda, completa los campos del formulario y en breve revisaremos tu solicitud</h2>
+                <hr class="display-4">
+                <br>
+                <div class="row" style="text-align: center;">
+                    <div class="col-5">
+                        <h2>Nombre del evento:</h2>
+                    </div>
+                    <div class="col-6">
+                        <input type="text" class="form-control" name="nombre" [(ngModel)]="evento.nombre" [ngClass]="{'alert alert-danger': error[0]}">
+                        
+                    </div>
+                </div>
+
+                <!--  -->
+                <br>
+                <div class="row" style="text-align: center;">
+                    <div class="col-5">
+                        <h2>Ubicacion del evento:</h2>
+                    </div>
+                    <div class="col-6">
+                        <input type="text" class="form-control" name="ubicacion" [(ngModel)]="evento.ubicacion" [ngClass]="{'alert alert-danger': error[1]}">
+                    </div>
+                </div>
+                <!--  -->
+                <br>
+                <div class="row" style="text-align: center;">
+                    <div class="col-5">
+                        <h2>Hora y fecha del evento:</h2>
+                    </div>
+                    <div class="col-6 col-sm-3">
+                        <input type="date" class="form-control" name="fecha" [(ngModel)]="evento.fecha" [ngClass]="{'alert alert-danger': error[2]}">
+                    </div>
+                    <div class="col-6 col-sm-3">
+                        <input type="time" class="form-control" name="hora" [(ngModel)]="evento.hora" [ngClass]="{'alert alert-danger': error[3]}">
+                    </div>
+                </div>
+                
+                <!--  -->
+                <br>
+                <div class="row" style="text-align: center;">
+                    <div class="col-5">
+                        <h1>Costo:</h1>
+                    </div>
+                    <div class="col-4" >
+                        <div class="input-group mb-3">
+                            <div *ngIf="costoEvento == 1">
+                                <input  type="number"  class="form-control" name="" id="" placeholder="Valor en Pesos" [ngClass]="{'alert alert-danger': error[4]}">
+                            </div>
+
+                            <div *ngIf="costoEvento != 1">
+                                <input  type="number"  class="form-control" name="" id="" placeholder="Valor sobre/gratis" disabled>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="col-2">
+                        <select class="form-control" name="costo" [(ngModel)]="costoEvento" >
+                            <option value=1 selected>Dinero</option>
+                            <option value=2>Sobre</option>
+                            <option value=3>gratis</option>
+                          </select>
+                    </div>
+                    
+                </div>
+
+                <!--  -->
+                <div class="row" style="text-align: center;">
+                    <div class="col-5">
+                        <h2>Foto:</h2>
+                    </div>
+                    <div class="col-6">
+                        <input type="file" class="form-control" accept="image/x-png,image/gif,image/jpeg" name="foto" [(ngModel)]="evento.foto" [ngClass]="{'alert alert-danger': error[5]}">
+                    </div>
+                </div>
+
+                <!--  -->
+                <br>
+                <div class="row" style="text-align: center;">
+                    <div class="col-5">
+                        <h2>Link a facebook:</h2>
+                    </div>
+                    <div class="col-6">
+                        <input type="url" class="form-control" name="facebook" [(ngModel)]="evento.facebook" [ngClass]="{'alert alert-danger': error[6]}">
+                    </div>
+                </div>
+
+                <!--  -->
+                <br>
+                <div class="row" style="text-align: center;">
+                    <div class="col-5">
+                        <h2>Link A Youtube:</h2>
+                    </div>
+                    <div class="col-6">
+                        <input type="url" class="form-control" name="Youtube" [(ngModel)]="evento.youtube" [ngClass]="{'alert alert-danger': error[7]}">
+                    </div>
+                </div>
+
+                <!--  -->
+                <br>
+                <div class="row" style="text-align: center;" *ngIf="errorMensajeBool">
+                <div class="col col-sm-6 alert alert-danger" style="text-align: center; margin: 0 auto;">
+                <h1>{{errorMensaje}}</h1>
+                </div>
+                </div>
+                <br>
+
+                <button (click)="archivo()" class="btn btn-success">Submit</button>
+            </form>
+            </div> 
+        </div>
+    </div>
+</div>
